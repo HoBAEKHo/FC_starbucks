@@ -1,28 +1,3 @@
-// const searchEl = document.querySelector('.search');
-// const searchInputEl = searchEl.querySelector('input');
-// const iconsEl = searchEl.querySelector('.material-icons');
-
-// searchEl.addEventListener('click', () => {
-//   searchInputEl.focus();
-// });
-
-// searchInputEl.addEventListener('focus', () => {
-//   searchEl.classList.add('focused');
-//   searchInputEl.setAttribute('placeholder', '통합검색');
-// });
-
-// searchInputEl.addEventListener('blur', () => {
-//   searchEl.classList.remove('focused');
-//   searchInputEl.setAttribute('placeholder', '');
-// });
-
-const searchEl = document.querySelector('.search-wrap');
-
-searchEl.addEventListener('click', () => {
-  searchEl.focus();
-})
-
-
 const toTopEl = document.querySelector('#to-top');
 window.addEventListener('scroll', _.throttle(() => {
   console.log(window.scrollY);
@@ -150,8 +125,3 @@ spyEls.forEach((spyEl) => {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
-
-
-//올해 년수
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
